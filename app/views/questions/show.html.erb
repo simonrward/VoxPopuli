@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Text:</b>
+  <%= @question.text %>
+</p>
+
+<h2>Options:</h2>
+<% @question.options.each do |option| %>
+  <p>
+    <%= option.text %>
+  </p>
+<% end %>
+
+<h2>Add an option to vote on</h2>
+<%= form_for([@question, @question.options.build]) do |f| %>
+  <div class="field">
+    <%= f.label :text %><br />
+    <%= f.text_field :text %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+<%= link_to 'Edit', edit_question_path(@question) %> |
+<%= link_to 'Back', questions_path %>
