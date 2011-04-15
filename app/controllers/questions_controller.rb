@@ -1,4 +1,6 @@
 class QuestionsController < ApplicationController
+  before_filter :authenticate, :only => :index
+  
   # GET /questions
   # GET /questions.xml
   def index
