@@ -2,7 +2,7 @@ Poll::Application.routes.draw do
   
   resources :questions do
     resources :options do
-      put :vote_up
+      put :vote
     end
   end 
   get "home/index"

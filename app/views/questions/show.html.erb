@@ -14,7 +14,7 @@
     <%= option.text %>:  
 
 
-	<%= link_to "Vote!", question_option_vote_up, :method => :put %>
+	<%= link_to "Vote!", question_option_vote_path(@question, option), :method => :put %>
 
 
   </p>

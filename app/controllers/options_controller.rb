@@ -5,8 +5,13 @@ class OptionsController < ApplicationController
     redirect_to question_path(@question)
   end
  
-  def vote_up 
+  def vote 
      option = Option.find(params[:option_id])
      option.increment(:count)
+     if option.save
+        format.html { redirect_to(@question, :notice => 'Thanks for voting!') }
+     else 
+       puts 'error saving'
+     end
    end
 end
