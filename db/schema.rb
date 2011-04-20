@@ -10,19 +10,21 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110415062255) do
+ActiveRecord::Schema.define(:version => 20110419064420) do
 
   create_table "options", :force => true do |t|
     t.string   "text"
     t.integer  "question_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "count",       :default => 0, :null => false
   end
 
   create_table "questions", :force => true do |t|
     t.string   "text"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "guid"
   end
 
 end

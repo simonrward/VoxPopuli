@@ -1,5 +1,5 @@
 class QuestionsController < ApplicationController
-  before_filter :authenticate, :only => :index
+  #before_filter :authenticate, :only => :index
   
   # GET /questions
   # GET /questions.xml
@@ -43,7 +43,9 @@ class QuestionsController < ApplicationController
   # POST /questions.xml
   def create
     @question = Question.new(params[:question])
-
+    
+    # Create GUID for question. Will access question by guid.
+    @question.guid = SecureRandom.hex(3)
     respond_to do |format|
       if @question.save
         format.html { redirect_to(@question, :notice => 'Question was successfully created.') }
@@ -82,4 +84,5 @@ class QuestionsController < ApplicationController
       format.xml  { head :ok }
     end
   end
+
 end

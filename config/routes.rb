@@ -1,10 +1,13 @@
 Poll::Application.routes.draw do
   
   resources :questions do
-    resources :options
-  end
-
+    resources :options do
+      put :vote_up
+    end
+  end 
   get "home/index"
+  
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
