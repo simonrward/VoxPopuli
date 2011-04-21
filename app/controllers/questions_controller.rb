@@ -84,5 +84,10 @@ class QuestionsController < ApplicationController
       format.xml  { head :ok }
     end
   end
+  
+  
+  def results
+    @question = Question.find(params[:question_id])
+  end
 
 end

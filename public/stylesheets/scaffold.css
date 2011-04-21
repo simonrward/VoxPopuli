@@ -1,11 +1,8 @@
-body { background-color: #fff; color: #333; }
+body {background-image: url(/images/bg.png); font-family:Georgia, Times New Roman, Times, serif;}
 
-body, p, ol, ul, td {
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size:   13px;
-  line-height: 18px;
-}
+#wrapper {width:700px;border:#3E0E38; margin: 0 auto;}
 
+h1 {font-style:italic;}
 pre {
   background-color: #eee;
   padding: 10px;

@@ -1,6 +1,7 @@
 Poll::Application.routes.draw do
   
   resources :questions do
+    get :results
     resources :options do
       put :vote
     end

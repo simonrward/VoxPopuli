@@ -1,0 +1,12 @@
+<p id="notice"><%= notice %></p>
+
+<p>Results for question <%= @question.id %></p>
+
+<ul>
+<% @question.options.each do |option| %>
+
+<li><%= option.text %> | <%= option.count %></li>
+<% end%>
+</ul>
+
+<%= link_to 'Back', questions_path %>
