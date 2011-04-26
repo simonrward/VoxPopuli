@@ -1,12 +1,21 @@
-body {background-image: url(/images/bg.png); font-family:Georgia, Times New Roman, Times, serif;}
+body {background-image: url(/images/bg.png); font-family:Monaco;}
 
-#wrapper {width:700px; margin: 0 auto; height:100%;}
+#wrapper {width:500px; margin: 0 auto; height:100%;margin-top:30px;
+	-moz-border-radius:10px;
+  	-webkit-border-radius: 10px;
+  	border-radius:         10px;
+	border:1px solid #7F7F7F;
+}
 
-h1 {font-style:italic; text-align:center;}
+h1 {text-align:center;text-shadow: #7F7F7F 2px 2px 2px;}
 pre {
   background-color: #eee;
   padding: 10px;
   font-size: 11px;
+}
+
+.round {
+  
 }
 
 .center{text-align:center;}
@@ -52,3 +61,5 @@ div.field, div.actions {
   font-size: 12px;
   list-style: square;
 }
+
+
