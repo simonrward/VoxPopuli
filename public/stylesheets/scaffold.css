@@ -2,12 +2,14 @@ body {background-image: url(/images/bg.png); font-family:Monaco;}
 
 #wrapper {width:500px; margin: 0 auto; height:100%;margin-top:30px;
 	-moz-border-radius:10px;
-  	-webkit-border-radius: 10px;
+  	-webkit-border: 10px;
   	border-radius:         10px;
-	border:1px solid #7F7F7F;
+	border:10px solid #7F7F7F;
+	background-color:#fff;
+	padding:15px;
 }
 
-h1 {text-align:center;text-shadow: #7F7F7F 2px 2px 2px;}
+h1 {text-align:center;}
 pre {
   background-color: #eee;
   padding: 10px;
