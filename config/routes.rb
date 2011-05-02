@@ -2,6 +2,8 @@ Poll::Application.routes.draw do
   
   resources :questions do
     get :results
+    put :lock_question
+    
     resources :options do
       put :vote
     end

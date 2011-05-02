@@ -8,8 +8,8 @@ class OptionsController < ApplicationController
   def vote 
     @option = Option.find(params[:option_id])
     @question = Question.find(params[:question_id])
+     @option.increment(:count)
       respond_to do |format|
-        @option.increment(:count)
         if @option.save
           #format.html { redirect_to(@question, :notice => 'Good choice!') }
           format.html { redirect_to question_results_url, :notice => "Thanks. How's your vote doing?" }

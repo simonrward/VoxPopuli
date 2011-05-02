@@ -1,4 +1,4 @@
-body {background-image: url(/images/bg.png); font-family:Monaco;}
+body {background-image: url(/images/60degree_gray.gif);  font-family: 'Merriweather', arial, serif; }
 
 #wrapper {width:500px; margin: 0 auto; height:100%;margin-top:30px;
 	-moz-border-radius:10px;
@@ -10,15 +10,16 @@ body {background-image: url(/images/bg.png); font-family:Monaco;}
 }
 
 h1 {text-align:center;}
+input {padding:5px; font-size:15px; font-family: 'Merriweather', arial, serif; border:1px solid #7F7F7F;  }
+
+div.redbox { background-color: #red;padding:10px; text-align:center;color:#FFDAE5;}
+
 pre {
   background-color: #eee;
   padding: 10px;
   font-size: 11px;
 }
 
-.round {
-  
-}
 
 .center{text-align:center;}
 a { color: #000; }

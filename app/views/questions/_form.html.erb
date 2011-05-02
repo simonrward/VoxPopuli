@@ -12,10 +12,10 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :text %><br />
-    <%= f.text_field :text %>
+    <%= f.label :text, 'Poll Text' %><br />
+    <%= f.text_field :text, :size => 50 %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit :value => 'Go!' %>
   </div>
 <% end %>

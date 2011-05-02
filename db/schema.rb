@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110419064420) do
+ActiveRecord::Schema.define(:version => 20110502130953) do
 
   create_table "options", :force => true do |t|
     t.string   "text"
@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(:version => 20110419064420) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "guid"
+    t.integer  "locked"
   end
 
 end

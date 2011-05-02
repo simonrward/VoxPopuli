@@ -1,5 +1,9 @@
-<h1>Questions</h1>
+<h1>Polls</h1>
 
+<% if @questions.empty? %>
+<div class="redbox">
+There are no Polls to vote on </div>
+<% end %>
 <table>
   <tr>
     <th></th>
@@ -14,10 +18,11 @@
     <td><%= link_to 'Show', question %></td>
     <td><%= link_to 'Edit', edit_question_path(question) %></td>
     <td><%= link_to 'Destroy', question, :confirm => 'Are you sure?', :method => :delete %></td>
+	<td><a href='mailto:?subject=VoxPopuli Poll: #{question.text}?body=localhost:3000/#{question.guid}'>Share</a></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Question', new_question_path %>
+<%= link_to 'New Poll', new_question_path %>

@@ -89,5 +89,22 @@ class QuestionsController < ApplicationController
   def results
     @question = Question.find(params[:question_id])
   end
+  
+  
+  def lock_question 
+     @question = Question.find(params[:question_id])
+     @question.locked = 1
+     
+     respond_to do |format|
+       if @question.save
+         #format.html { redirect_to(@question, :notice => 'Good choice!') }
+         format.html {redirect_to(@question, :notice => "Thanks. That poll is locked and no more options can be added.") }
+       else
+        puts 'Could not lock question'
+      end
+    end
+  end
+
+
 
 end
